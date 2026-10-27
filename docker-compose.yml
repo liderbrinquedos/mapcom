@@ -1,0 +1,9 @@
+# Compose para deploy no Coolify.
+# Regra do Coolify: SEM "ports:" (portas do host) — o Traefik dele roteia o
+# domínio configurado na UI para a porta exposta abaixo.
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    expose:
+      - "80"

@@ -1,0 +1,6 @@
+# Só para uso LOCAL — o Coolify roda explicitamente `docker-compose.yml`
+# e ignora este override; `docker compose up` local mescla os dois.
+services:
+  web:
+    ports:
+      - "8001:80"
